@@ -1,5 +1,5 @@
 ---
-title: API Glossary
+title: API Glossary Test Page
 navlink: apitest
 permalink: /apitest/
 layout: api_page

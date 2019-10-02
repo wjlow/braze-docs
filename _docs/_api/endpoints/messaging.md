@@ -281,20 +281,7 @@ Content-Type: application/json
 ```
 For more information on the "broadcast" flag, see [Broadcast][42] below.
 
-##### The Schedule Object
-
-The parameters for the Campaign and Canvas schedule creation endpoints mirror those of the sending endpoint and add the `schedule` parameter, which allows you to specify when you want your targeted users to receive your message. If you include only the `time` parameter in the `schedule` object, all of your users will be messaged at that time. If you set `in_local_time` to be true, your users will receive the message at the designated date and time in their respective timezones. If `in_local_time`is true, you will get an error response if the `time` parameter has passed in your company's time zone. If you set `at_optimal_time` to be true, your users will receive the message at the designated date at the [optimal time][33] for them (regardless of the time you provide). When using local or optimal time sending, do not provide time zone designators in the value of the time parameter (e.g. just give us `"2015-02-20T13:14:47"` instead of `"2015-02-20T13:14:47-05:00"`).
-
-The response will provide you with a `schedule_id` that you should save in case you later need to cancel or update the message you schedule:
-
-```json
-Content-Type: application/json
-{
-  "schedule_id" : (required, string) identifier for the scheduled message that was created
-}
-```
-
->  Customers using the API for server-to-server calls may need to whitelist the appropriate API URL if they're behind a firewall.
+> Customers using the API for server-to-server calls may need to whitelist the appropriate API URL if they're behind a firewall.
 
 > Message scheduling endpoint responses will include the message's `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the id of the message dispatch (unique id for each 'transmission' sent from the Braze platform).
 
@@ -510,29 +497,6 @@ Example Response:
 
 ##  Messaging Objects & Filters
 
-### User Alias Object
-
-{% raw %}
-
-The User Alias Object consists of two parts: an `alias_name` for the identifier itself, and an `alias_label` indicating the type of alias. Users can have multiple aliases with _different_ labels, but only one `alias_name` per `alias_label`.
-
-```json
-{
-  "alias_name" : (required, string),
-  "alias_label" : (required, string)
-}
-```
-
-### Recipient Object
-```json
-{
-  // Either "external_user_id" or "user_alias" is required. Requests must specify only one.
-  "user_alias": (optional, User Alias Object) User Alias of user to receive message,
-  "external_user_id": (optional, string) see External User Id,
-  "trigger_properties": (optional, object) personalization key-value pairs for this user when sending a Campaign or message; see Trigger Properties,
-  "canvas_entry_properties": (optional, object) personalization key-value pairs for this user when triggering a Canvas; see Canvas Entry Properties
-}
-```
 
 ### Connected Audience Object
 
