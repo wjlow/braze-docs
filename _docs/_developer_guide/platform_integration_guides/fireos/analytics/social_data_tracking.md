@@ -22,7 +22,6 @@ FacebookUser(
   String bio,
   String cityName,
   // Gender is a Braze enum.
-  // Specify either Gender.MALE or Gender.FEMALE.
   Gender gender,
   Integer numberOfFriends,
   // Names of pages the user likes.
@@ -45,15 +44,12 @@ TwitterUser(
 To pass data retrieved from social networks to Braze, you'll create a new FacebookUser or TwitterUser and then pass them to the method `AppboyUser.setFacebookData()`/`AppboyUser.setTwitterData()`. For example:
 
 ```java
-FacebookUser facebookUser = new FacebookUser("100000", "FirstName", "LastName", "email@email.com", "bio", "City", Gender.MALE, 3, ,"04/13/1990");
-AppboyUser.setFacebookData(facebookUser);
+FacebookUser facebookUser = new FacebookUser("100000", "FirstName", "LastName", "email@email.com", "bio", "City", Gender.MALE, 3, Arrays.asList(new String[]{ "like" }), "04/13/1990");
+Appboy.getInstance(context).getCurrentUser().setFacebookData(facebookUser);
 
-String imageUrl = "https://si0.twimg.com/profile_images/000/0000.jpeg";
-TwitterUser twitterUser = new TwitterUser(100000, "handle", "Name", "description", 100, 50, 150, imageUrl);
-AppboyUser.setTwitterData(twitterUser);
-
+TwitterUser twitterUser = new TwitterUser(100000, "handle", "Name", "description", 100, 50, 150, "image_url");
+Appboy.getInstance(context).getCurrentUser().setTwitterData(twitterUser);
 ```
-
 
 [1]: https://developers.facebook.com/docs/howtos/androidsdk/3.0/login-with-facebook/#step1
 [2]: https://developer.twitter.com/en/docs
