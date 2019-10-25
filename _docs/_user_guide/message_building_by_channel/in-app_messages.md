@@ -3,7 +3,7 @@ nav_title: "In-App Messages"
 page_order: 2
 layout: featured
 guide_top_header: "In-App Messages"
-guide_top_text: "In-App Messages help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before."
+guide_top_text: "In-App Messages deliver content to the user while they're natively using the app. Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before."
 
 guide_featured_title: "Popular Articles"
 guide_featured_list:
@@ -46,6 +46,7 @@ In-app messages are good for a lot of things. These messages don't deliver outsi
 - Sales and Promotions
 - Product Sales
 - Encouraging and rewarding discovery
+- Onboarding & Enablement
 - [Permission Requests/Push Priming][21]
 
 ## Expected Behaviors by Message Types
@@ -55,7 +56,7 @@ These are what it looks like for your users to open one of our out-of-the-box in
 {% tabs %}
   {% tab Slideup %}
 
-  Our Slideups typically appear at the top and bottom of the app screen (you can set this when you create your message). These are great for alerting your users about new terms of service, cookies, and other snippets of information.
+  Our Slideups typically appear at the top and bottom of the app screen (you can set this when you create your message). These are great for alerting your users about new terms of service, cookies, and other snippets of information. [Creative Details for Slideups]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creative_details/slideup)!
 
   <br>
 
@@ -66,7 +67,7 @@ These are what it looks like for your users to open one of our out-of-the-box in
 {% endtab %}
 {% tab Modal %}
 
-  Modals appear in the center of the device's screen with a screen overlay that helps it stand out from your app in the background. These are great call-to-action These are perfect for not-so-subtly suggesting that your user take advantage of a sale or giveaway.
+  Modals appear in the center of the device's screen with a screen overlay that helps it stand out from your app in the background. These are great call-to-action These are perfect for not-so-subtly suggesting that your user take advantage of a sale or giveaway. [Creative Details for Modals]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creative_details/modal)!
 
   <br>
 
@@ -77,7 +78,7 @@ These are what it looks like for your users to open one of our out-of-the-box in
 {% endtab %}
 {% tab Full-Screen %}
 
-Full-Screen messages are exactly what you'd expect - they take up the whole screen of the device! This message type is great when you really need your user's attention, like for mandatory app updates.
+Full-Screen messages are exactly what you'd expect - they take up the whole screen of the device! This message type is great when you really need your user's attention, like for mandatory app updates. [Creative Details for Full-Screens]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen)!
 
 <br>
 
