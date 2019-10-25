@@ -14,17 +14,9 @@ Installing the Braze SDK will provide you with basic analytics functionality as 
 
 A Xamarin binding is a way to use native libraries in Xamarin apps. The implementation of a binding consists of building a C# interface to the library, and then using that interface in your application.  See [the Xamarin documentation][2].
 
-There are two ways to include the Braze SDK binding.
+##### Nuget
 
-##### Option 1: Nuget
-
-The simplest integration method involves getting the Braze SDK Bindings from the [Nuget.org][9] central repository. In the Visual Studio sidebar, right click `Packages` folder and click `Add Packages...`.  Search for 'Braze' and install the [`AppboyPlatform.AndroidBinding`][13] package into your project.
-
-##### Option 2: Source
-
-The second integration method is to include the binding source found [here][3].  Under `appboy-component\src\android` you will find our binding source code; adding a project reference to the ```AppboyPlatform.XamarinAndroidBinding.csproj``` in your Xamarin application will cause the binding to be built with your project and provide you access to the Braze Android SDK.
-
-![Project Reference][10]
+The recommended integration method is to get the Braze SDK Bindings from the [Nuget.org][9] central repository. In the Visual Studio sidebar, right click `Packages` folder and click `Add Packages...`.  Search for 'Braze' and install the [`AppboyPlatform.AndroidBinding`][13] package into your project.
 
 >  The Braze Nuget package depends on the the [`Xamarin.Android.Support.v4`][12] Nuget package.
 
@@ -65,14 +57,12 @@ You should now be able to launch your application and see sessions being logged 
 > Consult the [Android integration instructions][8] for more in depth discussion of best practices for the basic SDK integration.
 
 [2]: http://developer.xamarin.com/guides/android/advanced_topics/java_integration_overview/binding_a_java_library_%28.jar%29/
-[3]: https://github.com/Appboy/appboy-xamarin-bindings
 [4]: https://dashboard-01.braze.com/app_settings/app_settings/ "App Settings"
 [5]: #configure-appboyxml
 [6]: #configure-android-manifest
 [7]: #track-sessions
 [8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/
 [9]: https://www.nuget.org/
-[10]: {% image_buster /assets/img_archive/xamarin_android_project.png %}
 [11]: https://github.com/Appboy/appboy-xamarin-bindings/blob/master/appboy-component/samples/xamarin-forms/Droid/Resources/values/Appboy.xml
 [12]: https://www.nuget.org/packages/Xamarin.Android.Support.v4/
 [13]: https://www.nuget.org/packages/AppboyPlatform.AndroidBinding/

@@ -12,17 +12,9 @@ Installing the Braze SDK will provide you with basic analytics functionality as 
 
 A Xamarin binding is a way to use native libraries in Xamarin apps.  The implementation of a binding consists of building a C# interface to the library, and then using that interface in your application.
 
-There are two ways to include the Braze SDK binding.
+##### Nuget
 
-##### Option 1: Nuget
-
-The simplest integration method involves getting the Braze SDK Bindings from the [Nuget.org][9] central repository. In the Visual Studio sidebar, right click `Packages` folder and click `Add Packages...`.  Search for 'Braze' and install the [`AppboyPlatformXamariniOSBinding`][11] package into your project.
-
-##### Option 2: Source
-
-The second integration method is to include the binding source found [here][3].  In [our github repo][7] you will find our binding source code; adding a project reference to the ```AppboyPlatformXamariniOSBinding.csproj``` in your Xamarin application will cause the binding to be built with your project and provide you access to the Braze iOS SDK. Please make sure `AppboyPlatformXamariniOSBinding` is showing in your project's "Reference" folder.
-
-![Project Reference][8]
+The recommended integration method is to get the Braze SDK Bindings from the [Nuget.org][9] central repository. In the Visual Studio sidebar, right click `Packages` folder and click `Add Packages...`.  Search for 'Braze' and install the [`AppboyPlatformXamariniOSBinding`][11] package into your project.
 
 ## Step 2: Update your App Delegate and Declare Xamarin Usage
 
@@ -47,11 +39,8 @@ Braze should now be collecting data from your application and your basic integra
 
 
 [2]: http://developer.xamarin.com/guides/ios/advanced_topics/binding_objective-c/
-[3]: https://github.com/Appboy/appboy-xamarin-bindings
 [4]: #add-api-calls
 [5]: https://dashboard-01.braze.com/app_settings/app_settings/ "App Settings"
-[7]: https://github.com/Appboy/appboy-xamarin-bindings/tree/master/appboy-component/src/ios-unified
-[8]: {% image_buster /assets/img_archive/xamarin_ios_project.png %}
 [9]: https://www.nuget.org/
 [10]: https://github.com/Appboy/appboy-xamarin-bindings/tree/master/appboy-component/samples/ios-unified/TestApp.XamariniOS
 [11]: https://www.nuget.org/packages/AppboyPlatformXamariniOSBinding/
